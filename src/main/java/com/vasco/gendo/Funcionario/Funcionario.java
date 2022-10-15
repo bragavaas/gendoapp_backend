@@ -19,6 +19,10 @@ public class Funcionario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-    private String name;
+    private String nome;
+    private String celular;
     private String email;
+    private String cpf;
+    private String expediente;
+    private String observacoes;
 }

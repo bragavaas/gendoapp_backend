@@ -7,14 +7,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/funcionarios/{id}")
-public class UpdateUserController {
+@RequestMapping("/api/funcionarios/{id}")
+public class UpdateFuncionarioController {
     @Autowired
     UpdateFuncionarioService service;
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
 
-    public ResponseEntity<Funcionario> updateUser_whenPutUser(@PathVariable long id, @RequestBody Funcionario funcionario) {
+    public ResponseEntity<Funcionario> updateFuncionario_whenPutFuncionario(@PathVariable long id, @RequestBody Funcionario funcionario) {
         return ResponseEntity.ok().body(service.updateFuncionario(id, funcionario));
     }
 }

@@ -14,8 +14,8 @@ public class UpdateServicoService {
     ServicoRepository repository;
     public Servico updateServico(long id, Servico servico)
     {
-        Optional<Servico> userOptional = repository.findById(id);
-        if(userOptional.isEmpty())
+        Optional<Servico> ServicoOptional = repository.findById(id);
+        if(ServicoOptional.isEmpty())
         {
             throw new ServicoNotFoundException(id);
         }

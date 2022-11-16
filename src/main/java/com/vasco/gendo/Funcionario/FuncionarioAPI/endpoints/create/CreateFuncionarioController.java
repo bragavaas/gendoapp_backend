@@ -11,7 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/funcionarios")
+@RequestMapping("/api/funcionarios")
 public class CreateFuncionarioController {
     @Autowired
     CreateFuncionarioService service;

@@ -1,6 +1,6 @@
-package com.vasco.gendo.Usuario.UsuarioAPI.endpoints.detail;
+package com.vasco.gendo.Cliente.ClienteAPI.endpoints.detail;
 
-import com.vasco.gendo.Usuario.User;
+import com.vasco.gendo.Cliente.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/users/{id}")
-public class DetailUserController {
+@RequestMapping("/api/clientes/{id}")
+public class DetailClienteController {
     @Autowired
-    DetailUserService service;
+    DetailClienteService service;
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
 
-    public ResponseEntity<Optional<User>>
+    public ResponseEntity<Optional<Cliente>>
     listUser_whenGetUser(@PathVariable Long id)
     {
-        return ResponseEntity.ok().body(service.listUser(id));
+        return ResponseEntity.ok().body(service.listCliente(id));
 
     }
 

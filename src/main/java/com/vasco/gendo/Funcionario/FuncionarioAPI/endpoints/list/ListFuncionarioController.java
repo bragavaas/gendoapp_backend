@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/funcionarios")
+@RequestMapping("/api/funcionarios")
 public class ListFuncionarioController {
     @Autowired
     ListFuncionarioService service;

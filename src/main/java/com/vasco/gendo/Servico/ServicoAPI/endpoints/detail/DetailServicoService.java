@@ -14,9 +14,9 @@ public class DetailServicoService {
     ServicoRepository repository;
 
     public Optional<Servico> listService(Long id) {
-        Optional<Servico> user = repository.findById(id);
+        Optional<Servico> servico = repository.findById(id);
 
-        if(!user.isPresent())
+        if(!servico.isPresent())
         {
             throw new ServicoNotFoundException(id);
         }

@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/funcionarios/{id}")
+@RequestMapping("/api/funcionarios/{id}")
 public class DeleteFuncionarioController {
     @Autowired
     DeleteFuncionarioService service;

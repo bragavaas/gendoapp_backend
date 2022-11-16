@@ -1,6 +1,5 @@
 package com.vasco.gendo;
 
-import com.vasco.gendo.Usuario.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

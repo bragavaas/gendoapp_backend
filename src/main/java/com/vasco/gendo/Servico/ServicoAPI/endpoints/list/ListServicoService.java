@@ -11,7 +11,7 @@ import java.util.List;
 public class ListServicoService {
     @Autowired
     ServicoRepository repository;
-    public List<Servico> listAllServices(){
+    public List<Servico> listAllServicos(){
         return repository.findAll();
     }
 }

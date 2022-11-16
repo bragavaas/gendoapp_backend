@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/servico/{id}")
+@RequestMapping("/api/servico/{id}")
 public class DetailServicoController {
     @Autowired
     DetailServicoService service;
@@ -17,7 +17,7 @@ public class DetailServicoController {
     @ResponseStatus(HttpStatus.OK)
 
     public ResponseEntity<Optional<Servico>>
-    listUser_whenGetUser(@PathVariable Long id)
+    listServico_whenGetServico(@PathVariable Long id)
     {
         return ResponseEntity.ok().body(service.listService(id));
 

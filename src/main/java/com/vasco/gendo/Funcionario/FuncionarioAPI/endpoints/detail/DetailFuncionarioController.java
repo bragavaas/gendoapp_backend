@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/funcionarios/{id}")
+@RequestMapping("/api/funcionarios/{id}")
 public class DetailFuncionarioController {
     @Autowired
     DetailFuncionarioService service;

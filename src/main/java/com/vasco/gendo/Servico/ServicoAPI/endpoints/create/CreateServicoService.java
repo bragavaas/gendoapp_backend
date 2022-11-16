@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class CreateServicoService {
     @Autowired
     ServicoRepository repository;
-    public Servico createNewUser(Servico servico) {
+    public Servico createNewServico(Servico servico) {
         return repository.save(servico);
     }
 }

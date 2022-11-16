@@ -1,20 +1,20 @@
-package com.vasco.gendo.Usuario.UsuarioAPI.endpoints.delete;
+package com.vasco.gendo.Cliente.ClienteAPI.endpoints.delete;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/users/{id}")
-public class DeleteUserController {
+@RequestMapping("/api/clientes/{id}")
+public class DeleteClienteController {
     @Autowired
-    DeleteUserService service;
+    DeleteClienteService service;
     @DeleteMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
 
     public void
-    deleteUser_whenDeleteUser(@PathVariable Long id)
+    deleteCliente_whenDeleteCliente(@PathVariable Long id)
     {
-        service.deleteUser(id);
+        service.deleteCliente(id);
     }
 }

@@ -13,9 +13,9 @@ public class DeleteServicoService {
     @Autowired
     ServicoRepository repository;
     public void deleteServico(long id){
-        Optional<Servico> userOptional = repository.findById(id);
+        Optional<Servico> ServicoOptional = repository.findById(id);
 
-        if( !userOptional.isPresent()){
+        if( !ServicoOptional.isPresent()){
             throw new ServicoNotFoundException(id);
         }
         else

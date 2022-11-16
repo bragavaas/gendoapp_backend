@@ -11,7 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/servico")
+@RequestMapping("/api/servico")
 public class CreateServicoController {
     @Autowired
     CreateServicoService service;
@@ -19,8 +19,8 @@ public class CreateServicoController {
     @ResponseStatus(HttpStatus.CREATED)
 
     public ResponseEntity<Servico>
-    createNewUser_whenPostUser(@RequestBody Servico servico){
-        Servico createdService = service.createNewUser(servico);
+    createNewServico_whenPostServico(@RequestBody Servico servico){
+        Servico createdService = service.createNewServico(servico);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(createdService.getId())

@@ -1,5 +1,6 @@
-package com.vasco.gendo.Usuario;
+package com.vasco.gendo.Cliente;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,11 +15,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class User implements Serializable {
+public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @JsonProperty("_id")
     private Long id;
-    private String name;
+    private String nome;
     private String email;
+    private String telefone;
 }

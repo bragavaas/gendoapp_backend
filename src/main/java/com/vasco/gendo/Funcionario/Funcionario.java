@@ -1,5 +1,6 @@
 package com.vasco.gendo.Funcionario;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,12 +18,18 @@ import java.io.Serializable;
 public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @JsonProperty("_id")
     private Long id;
+
     private String nome;
+
     private String celular;
+
     private String email;
+
     private String cpf;
+
     private String expediente;
+
     private String observacoes;
 }

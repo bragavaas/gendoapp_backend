@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/servicos")
+@RequestMapping("/api/servicos")
 public class ListServicoController {
     @Autowired
     ListServicoService service;
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<Servico>>
-    listAllUsers_whenGetUsers(){
-        return ResponseEntity.ok().body(service.listAllServices());
+    listAllServicos_whenGetServicos(){
+        return ResponseEntity.ok().body(service.listAllServicos());
     }
 }

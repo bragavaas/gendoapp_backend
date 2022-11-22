@@ -10,7 +10,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/cliente")
+@RequestMapping("/api/clientes")
 public class CreateClienteController {
     @Autowired
     CreateClienteService service;

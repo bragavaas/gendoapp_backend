@@ -11,7 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/servico")
+@RequestMapping("/api/servicos")
 public class CreateServicoController {
     @Autowired
     CreateServicoService service;

@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/servico/{id}")
+@RequestMapping("/api/servicos/{id}")
 public class UpdateServicoController {
     @Autowired
     UpdateServicoService service;

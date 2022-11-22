@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/servico/{id}")
+@RequestMapping("/api/servicos/{id}")
 public class DeleteServicoController {
     @Autowired
     DeleteServicoService service;

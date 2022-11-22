@@ -21,9 +21,7 @@ public class Servico{
     private Long id;
     private String nome_do_servico;
     private String descricao;
-    private String imagem_do_servico;
-    private String duracao_do_atendimento;
+    private int duracao_do_atendimento;
     private double valor_servico;
-    private String comissao;
-    private String especialidade;
+    private double comissao;
 }

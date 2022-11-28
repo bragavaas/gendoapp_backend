@@ -1,6 +1,7 @@
 package com.vasco.gendo.Cliente.ClienteAPI.endpoints.update;
 
 import com.vasco.gendo.Cliente.Cliente;
+import com.vasco.gendo.Cliente.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +11,19 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/clientes/{id}")
 public class UpdateClienteController {
     @Autowired
-    UpdateClienteService service;
+    ClienteRepository repository;
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
 
-    public ResponseEntity<Cliente> updateCliente_whenPutCliente(@PathVariable long id, @RequestBody Cliente cliente) {
-        return ResponseEntity.ok().body(service.updateCliente(id, cliente));
+    public ResponseEntity<Cliente> updateClient_whenPutClient(@PathVariable long id, @RequestBody Cliente cliente) {
+        return repository.findById(id).map(recordFound -> {
+            recordFound.setId(id);
+            recordFound.setNome(cliente.getNome());
+            recordFound.setTelefone(cliente.getTelefone());
+            recordFound.setEmail(cliente.getEmail());
+            Cliente updated = repository.save(recordFound);
+            return ResponseEntity.ok().body(recordFound);
+        })
+                .orElse(ResponseEntity.notFound().build());
     }
 }

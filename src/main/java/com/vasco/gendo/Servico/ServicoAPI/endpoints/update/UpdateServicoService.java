@@ -21,7 +21,6 @@ public class UpdateServicoService {
         }
         else
         {
-            repository.findById(id);
             return repository.save(servico);
         }
     }

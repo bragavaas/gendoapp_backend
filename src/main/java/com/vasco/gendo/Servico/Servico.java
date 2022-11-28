@@ -1,5 +1,6 @@
 package com.vasco.gendo.Servico;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,7 @@ import java.io.Serializable;
 public class Servico{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @JsonProperty("_id")
     private Long id;
     private String nome_do_servico;
     private String descricao;
